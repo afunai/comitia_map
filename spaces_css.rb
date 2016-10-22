@@ -1,16 +1,13 @@
 #!/usr/bin/env ruby
 
+require 'yaml'
+
 SPACE_WIDTH = 11
 SPACE_HEIGHT = 17
 ISLE_WIDTH = 18
 ISLE_HEIGHT = 18
 
-@blocks = {
-  'I' => {
-    :position => {:x => 284, :y => 614},
-    :islands  => [[5, 7], [8, 8]],
-  },
-}
+@blocks = YAML.load_file('src/blocks.yaml')
 
 # positions of each spaces
 spaces_positions = {}
