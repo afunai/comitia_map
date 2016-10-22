@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-image: url("../images/comitia118-3000x1367.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
