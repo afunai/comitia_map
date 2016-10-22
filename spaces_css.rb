@@ -2,10 +2,11 @@
 
 require 'yaml'
 
-SPACE_WIDTH = 11
-SPACE_HEIGHT = 17
-ISLE_WIDTH = 18
-ISLE_HEIGHT = 18
+dimensions = YAML.load_file('src/dimensions.yaml')
+SPACE_WIDTH  = dimensions[:SPACE_WIDTH]
+SPACE_HEIGHT = dimensions[:SPACE_HEIGHT]
+ISLE_WIDTH   = dimensions[:ISLE_WIDTH]
+ISLE_HEIGHT  = dimensions[:ISLE_HEIGHT]
 
 blocks = YAML.load_file('src/blocks.yaml')
 
