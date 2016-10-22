@@ -7,12 +7,12 @@ SPACE_HEIGHT = 17
 ISLE_WIDTH = 18
 ISLE_HEIGHT = 18
 
-@blocks = YAML.load_file('src/blocks.yaml')
+blocks = YAML.load_file('src/blocks.yaml')
 
 # positions of each spaces
 spaces_positions = {}
 
-@blocks.each do |initial, block|
+blocks.each do |initial, block|
   longest_bottom_island = block[:islands].collect {|row| row.first}.max
 
   space_number = 1
