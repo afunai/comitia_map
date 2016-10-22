@@ -1,5 +1,62 @@
 #!/usr/bin/env ruby
 
+SPACE_WIDTH = 11
+SPACE_HEIGHT = 17
+ISLE_WIDTH = 18
+ISLE_HEIGHT = 18
+
+@blocks = {
+  'I' => {
+    :position => {:x => 284, :y => 614},
+    :islands  => [[5, 7], [8, 8]],
+  },
+}
+
+# positions of each spaces
+spaces_positions = {}
+
+@blocks.each do |initial, block|
+  longest_bottom_island = block[:islands].collect {|row| row.first}.max
+
+  space_number = 1
+
+  block[:islands].each_with_index do |row, i|
+    offset_x = (SPACE_WIDTH * 2 + ISLE_WIDTH) * i - SPACE_WIDTH / 2 + 4
+    offset_y = SPACE_HEIGHT * (block[:islands].first.first - row.first) + SPACE_HEIGHT - 6
+
+    # go upward the island
+    row.each do |col_length|
+      col_length.times do |space|
+        spaces_positions[initial + '-' + space_number.to_s] = {
+          :x => block[:position][:x] + offset_x + ((space == 0 || space == col_length - 1) ? SPACE_WIDTH / 2 : 0), # center "birthday" space
+          :y => block[:position][:y] - offset_y,
+        }
+        space_number += 1
+        offset_y += SPACE_HEIGHT
+      end
+      offset_y += ISLE_HEIGHT
+    end
+
+    offset_x += SPACE_WIDTH
+    offset_y -= SPACE_HEIGHT + ISLE_HEIGHT
+
+    # go downward the island
+    row.reverse.each do |col_length|
+      col_length.times do |space|
+        unless (space == 0 || space == col_length - 1) # skip "birthday" space
+          spaces_positions[initial + '-' + space_number.to_s] = {
+            :x => block[:position][:x] + offset_x,
+            :y => block[:position][:y] - offset_y,
+          }
+          space_number += 1
+        end
+        offset_y -= SPACE_HEIGHT
+      end
+      offset_y -= ISLE_HEIGHT
+    end
+  end
+end
+
 File.open('./build/css/spaces.css', 'w') do |f|
   f.puts <<-_CSS
 @charset "UTF-8";
@@ -13,20 +70,19 @@ ul li {
   margin: 0px;
   padding: 0px;
 
-  list-style-type: none
+  list-style-type: none;
+  color: red;
+  font-size: 7pt;
 }
 
   _CSS
 
-  f.puts <<-_CSS
-#I-1 {
-  left: 0px;
-  top: 0px;
+  spaces_positions.each do |space, position|
+    f.puts <<-_CSS
+##{space} {
+  left: #{position[:x]}px;
+  top: #{position[:y]}px;
 }
-
-#I-2 {
-  left: 100px;
-  top: 100px;
-}
-  _CSS
+    _CSS
+  end
 end
