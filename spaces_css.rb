@@ -68,7 +68,7 @@ ul li {
 
   list-style-type: none;
   color: red;
-  font-size: 7pt;
+  font-size: 8pt;
 }
 
   _CSS
