@@ -14,8 +14,6 @@ blocks = YAML.load_file('src/blocks.yaml')
 spaces_positions = {}
 
 blocks.each do |initial, block|
-  longest_bottom_island = block[:islands].collect {|row| row.first}.max
-
   space_number = 1
 
   block[:islands].each_with_index do |row, i|
