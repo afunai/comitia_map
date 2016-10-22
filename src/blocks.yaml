@@ -175,3 +175,154 @@ P:
     -
       - 8
       - 8
+
+Q:
+  :position:
+    :x: 1140
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+R:
+  :position:
+    :x: 1223
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+S:
+  :position:
+    :x: 1306
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+
+T:
+  :position:
+    :x: 1441
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+U:
+  :position:
+    :x: 1524
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+V:
+  :position:
+    :x: 1607
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+W:
+  :position:
+    :x: 1690
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+X:
+  :position:
+    :x: 1773
+    :y: 1008
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+
+Y:
+  :position:
+    :x: 1140
+    :y: 665
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+Z:
+  :position:
+    :x: 1223
+    :y: 665
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+あ:
+  :position:
+    :x: 1306
+    :y: 665
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+
+い:
+  :position:
+    :x: 1441
+    :y: 665
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+う:
+  :position:
+    :x: 1524
+    :y: 665
+  :islands:
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+    -
+      - 8
+      - 8
+
