@@ -23,7 +23,7 @@ blocks.each do |initial, block|
     # go upward the island
     row.each do |col_length|
       col_length.times do |space|
-        spaces_positions[initial + '-' + space_number.to_s] = {
+        spaces_positions[initial + '-' + "%02d" % space_number] = {
           :x => block[:position][:x] + offset_x + ((space == 0 || space == col_length - 1) ? SPACE_WIDTH / 2 : 0), # center "birthday" space
           :y => block[:position][:y] - offset_y,
         }
@@ -40,7 +40,7 @@ blocks.each do |initial, block|
     row.reverse.each do |col_length|
       col_length.times do |space|
         unless (space == 0 || space == col_length - 1) # skip "birthday" space
-          spaces_positions[initial + '-' + space_number.to_s] = {
+          spaces_positions[initial + '-' + "%02d" % space_number] = {
             :x => block[:position][:x] + offset_x,
             :y => block[:position][:y] - offset_y,
           }
