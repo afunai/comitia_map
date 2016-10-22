@@ -1,10 +1,22 @@
 @charset "UTF-8";
 
 body {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  width: 3000px;
+  height: 1367px;
+}
 
+body:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-image: url("../images/comitia118-3000x1367.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
+  width: 100%;
+  height: 100%;
+  opacity : 0.5;
+  z-index: -1;
 }
