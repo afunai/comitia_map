@@ -75,7 +75,7 @@ ul li {
 
   spaces_positions.each do |space, position|
     f.puts <<-_CSS
-##{space} {
+##{space}, ##{space}a, ##{space}b {
   left: #{position[:x]}px;
   top: #{position[:y]}px;
 }
