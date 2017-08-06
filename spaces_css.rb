@@ -18,7 +18,7 @@ end
 
 def height_for(col_num, col_length, space_idx, initial)
   ((is_birthday_space?(col_num, col_length, space_idx) || is_birthday_space?(col_num, col_length, space_idx + 1)) ? birthday_space_height : SPACE_HEIGHT) -
-  (initial =~ /[M-X]/ ? 0.7 : 0)
+  (initial =~ /[M-Zあ-おせ-ほ]/ ? 0.7 : initial =~ /[か-せま]/ ? 0.35 : 0)
 end
 
 blocks = YAML.load_file('src/blocks.yaml')
