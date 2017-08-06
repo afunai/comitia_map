@@ -8,8 +8,8 @@ SPACE_HEIGHT = dimensions[:SPACE_HEIGHT]
 ISLE_WIDTH   = dimensions[:ISLE_WIDTH]
 ISLE_HEIGHT  = dimensions[:ISLE_HEIGHT]
 
-def is_birthday_space?(col_num, col_length, space_num)
-  space_num == 0 || space_num == col_length - 1
+def is_birthday_space?(col_num, col_length, space_idx)
+  (col_num == 0 && space_idx == 0) || (col_num == 1 && space_idx == col_length - 1)
 end
 
 blocks = YAML.load_file('src/blocks.yaml')
@@ -25,10 +25,10 @@ blocks.each do |initial, block|
     offset_y = SPACE_HEIGHT * (block[:islands].first.first - row.first) + SPACE_HEIGHT - 6
 
     # go upward the island
-    row.each do |col_length|
-      col_length.times do |space|
+    row.each_with_index do |col_length, col_num|
+      col_length.times do |space_idx|
         spaces_positions[initial + '-' + "%02d" % space_number] = {
-          :x => block[:position][:x] + offset_x + (is_birthday_space?(nil, col_length, space) ? SPACE_WIDTH / 2 : 0), # center "birthday" space
+          :x => block[:position][:x] + offset_x + (is_birthday_space?(col_num, col_length, space_num) ? SPACE_WIDTH / 2 : 0), # center "birthday" space
           :y => block[:position][:y] - offset_y,
         }
         space_number += 1
@@ -41,9 +41,9 @@ blocks.each do |initial, block|
     offset_y -= SPACE_HEIGHT + ISLE_HEIGHT
 
     # go downward the island
-    row.reverse.each do |col_length|
-      col_length.times do |space|
-        unless is_birthday_space?(nil, col_length, space) # skip "birthday" space
+    row.reverse.each_with_index do |col_length, col_num|
+      col_length.times do |space_idx|
+        unless is_birthday_space?(col_num, col_length, space_idx) # skip "birthday" space
           spaces_positions[initial + '-' + "%02d" % space_number] = {
             :x => block[:position][:x] + offset_x,
             :y => block[:position][:y] - offset_y,
