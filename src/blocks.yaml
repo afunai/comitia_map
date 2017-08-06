@@ -196,168 +196,268 @@ X:
 
 Y:
   :position:
-    :x: 1140
-    :y: 665
+    :x: 1394
+    :y: 1227
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 Z:
   :position:
-    :x: 1223
-    :y: 665
+    :x: 1456
+    :y: 1227
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 あ:
   :position:
-    :x: 1306
-    :y: 665
+    :x: 1514
+    :y: 1227
   :islands:
     -
       - 8
       - 8
-    -
-      - 8
-      - 8
-
 い:
   :position:
-    :x: 1441
-    :y: 665
+    :x: 1576
+    :y: 1227
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 う:
   :position:
-    :x: 1524
-    :y: 665
+    :x: 1636
+    :y: 1227
   :islands:
     -
       - 8
       - 8
-    -
-      - 8
-      - 8
+え:
+  :position:
+    :x: 1698
+    :y: 1227
+  :islands:
     -
       - 8
       - 8
 
-え:
-  :position:
-    :x: 1909
-    :y: 974
-  :islands:
-    -
-      - 6
-      - 7
-    -
-      - 6
-      - 7
 お:
   :position:
-    :x: 1992
-    :y: 974
+    :x: 1812
+    :y: 1227
   :islands:
-    -
-      - 6
-      - 7
     -
       - 8
       - 8
 か:
   :position:
-    :x: 2075
-    :y: 1008
+    :x: 1872
+    :y: 1257
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 き:
   :position:
-    :x: 2158
-    :y: 1008
+    :x: 1933
+    :y: 1257
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 く:
   :position:
-    :x: 2309
-    :y: 1008
+    :x: 1995
+    :y: 1257
   :islands:
     -
+      - 9
       - 8
-      - 8
-    -
-      - 8
-      - 8
-    -
-      - 8
-      - 8
-
 け:
   :position:
-    :x: 1950
-    :y: 649
+    :x: 2056
+    :y: 1257
   :islands:
     -
-      - 6
-      - 6
-    -
-      - 6
-      - 6
-    -
-      - 7
-      - 6
+      - 9
+      - 8
 こ:
   :position:
-    :x: 2075
-    :y: 665
+    :x: 2117
+    :y: 1257
   :islands:
     -
-      - 7
-      - 6
-    -
-      - 7
-      - 6
+      - 9
+      - 8
 さ:
   :position:
-    :x: 2158
-    :y: 665
+    :x: 2178
+    :y: 1257
   :islands:
     -
-      - 7
-      - 6
-    -
-      - 7
-      - 6
+      - 9
+      - 8
 し:
   :position:
-    :x: 2309
-    :y: 665
+    :x: 2239
+    :y: 1257
   :islands:
     -
-      - 10
+      - 9
+      - 8
+す:
+  :position:
+    :x: 2301
+    :y: 1257
+  :islands:
     -
-      - 10
+      - 9
+      - 8
+せ:
+  :position:
+    :x: 2360
+    :y: 1230
+  :islands:
     -
-      - 10
+      - 8
+      - 4
 
+そ:
+  :position:
+    :x: 1335
+    :y: 718
+  :islands:
+    -
+      - 7
+      - 6
+た:
+  :position:
+    :x: 1392
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+ち:
+  :position:
+    :x: 1455
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+つ:
+  :position:
+    :x: 1514
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+て:
+  :position:
+    :x: 1576
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+と:
+  :position:
+    :x: 1636
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+な:
+  :position:
+    :x: 1698
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+
+に:
+  :position:
+    :x: 1812
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+ぬ:
+  :position:
+    :x: 1872
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+ね:
+  :position:
+    :x: 1933
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+の:
+  :position:
+    :x: 1995
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+は:
+  :position:
+    :x: 2056
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+ひ:
+  :position:
+    :x: 2117
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+ふ:
+  :position:
+    :x: 2178
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+へ:
+  :position:
+    :x: 2239
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+ほ:
+  :position:
+    :x: 2301
+    :y: 742
+  :islands:
+    -
+      - 8
+      - 8
+ま:
+  :position:
+    :x: 2362
+    :y: 648
+  :islands:
+    -
+      - 4
+      - 7
