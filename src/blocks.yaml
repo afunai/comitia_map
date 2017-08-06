@@ -8,257 +8,188 @@ A:
       - 8
 B:
   :position:
-    :x: 367
-    :y: 1008
+    :x: 295
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 C:
   :position:
-    :x: 450
-    :y: 1008
+    :x: 357
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 D:
   :position:
-    :x: 586
-    :y: 1008
+    :x: 418
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 E:
   :position:
-    :x: 669
-    :y: 1008
+    :x: 479
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 F:
   :position:
-    :x: 752
-    :y: 1008
+    :x: 541
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 G:
   :position:
-    :x: 835
-    :y: 1008
+    :x: 600
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 H:
   :position:
-    :x: 918
-    :y: 1008
+    :x: 662
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 
 I:
   :position:
-    :x: 284
-    :y: 614
+    :x: 796
+    :y: 1263
   :islands:
     -
-      - 5
-      - 7
-    -
-      - 8
+      - 9
       - 8
 J:
   :position:
-    :x: 367
-    :y: 665
+    :x: 857
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 K:
   :position:
-    :x: 450
-    :y: 665
+    :x: 916
+    :y: 1263
   :islands:
     -
-      - 8
-      - 8
-    -
-      - 8
+      - 9
       - 8
 L:
   :position:
-    :x: 586
-    :y: 665
+    :x: 978
+    :y: 1263
   :islands:
     -
+      - 9
       - 8
-      - 8
-    -
-      - 8
-      - 8
+
 M:
   :position:
-    :x: 669
-    :y: 665
+    :x: 233
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 N:
   :position:
-    :x: 752
-    :y: 665
+    :x: 295
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 O:
   :position:
-    :x: 835
-    :y: 665
+    :x: 357
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 P:
   :position:
-    :x: 918
-    :y: 665
+    :x: 418
+    :y: 742
   :islands:
     -
       - 8
       - 8
-    -
-      - 8
-      - 8
-
 Q:
   :position:
-    :x: 1140
-    :y: 1008
+    :x: 479
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 R:
   :position:
-    :x: 1223
-    :y: 1008
+    :x: 541
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 S:
   :position:
-    :x: 1306
-    :y: 1008
+    :x: 600
+    :y: 742
   :islands:
     -
       - 8
       - 8
+T:
+  :position:
+    :x: 662
+    :y: 742
+  :islands:
     -
       - 8
       - 8
 
-T:
-  :position:
-    :x: 1441
-    :y: 1008
-  :islands:
-    -
-      - 8
-      - 8
-    -
-      - 8
-      - 8
 U:
   :position:
-    :x: 1524
-    :y: 1008
+    :x: 796
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 V:
   :position:
-    :x: 1607
-    :y: 1008
+    :x: 857
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 W:
   :position:
-    :x: 1690
-    :y: 1008
+    :x: 916
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
 X:
   :position:
-    :x: 1773
-    :y: 1008
+    :x: 978
+    :y: 742
   :islands:
-    -
-      - 8
-      - 8
     -
       - 8
       - 8
