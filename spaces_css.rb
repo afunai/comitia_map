@@ -16,8 +16,9 @@ def birthday_space_height
   (SPACE_WIDTH + SPACE_HEIGHT) / 2 # horizontal
 end
 
-def height_for(col_num, col_length, space_idx)
-  (is_birthday_space?(col_num, col_length, space_idx) || is_birthday_space?(col_num, col_length, space_idx + 1)) ? birthday_space_height : SPACE_HEIGHT
+def height_for(col_num, col_length, space_idx, initial)
+  ((is_birthday_space?(col_num, col_length, space_idx) || is_birthday_space?(col_num, col_length, space_idx + 1)) ? birthday_space_height : SPACE_HEIGHT) -
+  (initial =~ /[M-X]/ ? 0.7 : 0)
 end
 
 blocks = YAML.load_file('src/blocks.yaml')
@@ -42,8 +43,8 @@ blocks.each do |initial, block|
           :y => block[:position][:y] - offset_y,
         }
         space_number += 1
-        offset_y += height_for(col_num, col_length, space_idx)
-        last_height = height_for(col_num, col_length, space_idx) # YUCK
+        offset_y += height_for(col_num, col_length, space_idx, initial)
+        last_height = height_for(col_num, col_length, space_idx, initial) # YUCK
       end
       offset_y += ISLE_HEIGHT
     end
@@ -61,7 +62,7 @@ blocks.each do |initial, block|
           }
           space_number += 1
         end
-        offset_y -= height_for(col_num, col_length, space_idx)
+        offset_y -= height_for(col_num, col_length, space_idx, initial)
       end
       offset_y -= ISLE_HEIGHT
     end
