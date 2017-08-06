@@ -12,6 +12,14 @@ def is_birthday_space?(col_num, col_length, space_idx)
   (col_num == 0 && space_idx == 0) || (col_num == 1 && space_idx == col_length - 1)
 end
 
+def birthday_space_height
+  (SPACE_WIDTH + SPACE_HEIGHT) / 2 # horizontal
+end
+
+def height_for(col_num, col_length, space_idx)
+  (is_birthday_space?(col_num, col_length, space_idx) || is_birthday_space?(col_num, col_length, space_idx + 1)) ? birthday_space_height : SPACE_HEIGHT
+end
+
 blocks = YAML.load_file('src/blocks.yaml')
 
 # positions of each spaces
@@ -24,21 +32,24 @@ blocks.each do |initial, block|
     offset_x = (SPACE_WIDTH * 2 + ISLE_WIDTH) * i - SPACE_WIDTH / 2 + 4
     offset_y = SPACE_HEIGHT * (block[:islands].first.first - row.first) + SPACE_HEIGHT - 6
 
+    last_height = 0 # YUCK
+
     # go upward the island
     row.each_with_index do |col_length, col_num|
       col_length.times do |space_idx|
         spaces_positions[initial + '-' + "%02d" % space_number] = {
-          :x => block[:position][:x] + offset_x + (is_birthday_space?(col_num, col_length, space_num) ? SPACE_WIDTH / 2 : 0), # center "birthday" space
+          :x => block[:position][:x] + offset_x + (is_birthday_space?(col_num, col_length, space_idx) ? SPACE_WIDTH / 2 : 0), # center "birthday" space
           :y => block[:position][:y] - offset_y,
         }
         space_number += 1
-        offset_y += SPACE_HEIGHT
+        offset_y += height_for(col_num, col_length, space_idx)
+        last_height = height_for(col_num, col_length, space_idx) # YUCK
       end
       offset_y += ISLE_HEIGHT
     end
 
     offset_x += SPACE_WIDTH
-    offset_y -= SPACE_HEIGHT + ISLE_HEIGHT
+    offset_y -= last_height + ISLE_HEIGHT # almost makes me vomit
 
     # go downward the island
     row.reverse.each_with_index do |col_length, col_num|
@@ -50,7 +61,7 @@ blocks.each do |initial, block|
           }
           space_number += 1
         end
-        offset_y -= SPACE_HEIGHT
+        offset_y -= height_for(col_num, col_length, space_idx)
       end
       offset_y -= ISLE_HEIGHT
     end
