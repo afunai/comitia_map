@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>comitia 121</title>
+    <link type="text/css" rel="stylesheet" media="all" href="css/map.css">
+    <link type="text/css" rel="stylesheet" media="all" href="css/spaces.css">
+    <link type="text/css" rel="stylesheet" media="all" href="css/spaces_wall.css">
+    <style>
+      #spaces li {
+        font-size: xx-small;
+      }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function() {
+        var blocks = {
+          A: 32,
+          B: 32,
+          C: 32,
+          D: 32,
+          E: 32,
+          F: 32,
+          G: 32,
+          H: 32,
+          I: 32,
+          J: 32,
+          K: 32,
+          L: 32,
+          M: 30,
+          N: 30,
+          O: 30,
+          P: 30,
+          Q: 30,
+          R: 30,
+          S: 30,
+          T: 30,
+          U: 30,
+          V: 30,
+          W: 30,
+          X: 30,
+          Y: 30,
+          Z: 30,
+          あ: 30,
+          い: 30,
+          う: 30,
+          え: 30,
+          お: 30,
+          か: 32,
+          き: 32,
+          く: 32,
+          け: 32,
+          こ: 32,
+          さ: 32,
+          し: 32,
+          す: 32,
+          せ: 22,
+          そ: 24,
+          た: 30,
+          ち: 30,
+          つ: 30,
+          て: 30,
+          と: 30,
+          な: 30,
+          に: 30,
+          ぬ: 30,
+          ね: 30,
+          の: 30,
+          は: 30,
+          ひ: 30,
+          ふ: 30,
+          へ: 30,
+          ほ: 30,
+          ま: 20,
+          み: 47,
+        };
+        for (initial in blocks) {
+          for (i = 1; i <= blocks[initial]; i++) {
+            $('#spaces').append('<li id="' + initial + '-' + ('0' + i).slice(-2) + '">' + initial + i + '</li>');
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="spaces">
+    </ul>
+  </body>
+</html>
